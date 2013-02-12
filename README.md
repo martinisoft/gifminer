@@ -7,7 +7,7 @@ Requirements
 ------------
 
 * Ruby 1.9.3-p354 (rvmrc included)
-* A \*nix based system to develop on (Sorry Windows)
+* A \*nix based system to develop on (Consider contributing a setup thingy for Windows?)
 
 Getting Started
 ---------------
