@@ -22,6 +22,8 @@ end
 
 gem 'haml'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-tumblr'
 
 gem 'jquery-rails'
 
