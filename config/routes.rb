@@ -3,7 +3,11 @@ Gifminer::Application.routes.draw do
   get "home/about"
   get "home/license"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+
+  # devise_scope :user do
+  #   match '/auth/tumblr/callback' => 'omniauth_callbacks#tumblr'
+  # end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -44,3 +44,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+  gem "annotate", "~> 2.5.0"
+end

@@ -235,7 +235,6 @@ Devise.setup do |config|
   # config.router_name = :my_engine
   #
 
-  require "omniauth-tumblr"
   config.omniauth :tumblr, ENV['TUMBLR_KEY'], ENV['TUMBLR_SECRET']
 
   # When using omniauth, Devise cannot automatically set Omniauth path,

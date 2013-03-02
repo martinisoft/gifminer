@@ -6,11 +6,17 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %p.notice
-      = notice
-    %p.alert
-      = alert
     = render 'navigation'
+    .row
+      .large-12.columns
+        - unless notice.blank?
+          %p.notice.alert-box.radius{ 'data-alert' => true }
+            = notice
+            %a.close{ href: '#' } ×
+        - unless alert.blank?
+          %p.alert.alert-box.radius{ 'data-alert' => true }
+            = alert
+            %a.close{ href: '#' } ×
     / .row
     /   .large-12.columns
     /     / Desktop Slider
