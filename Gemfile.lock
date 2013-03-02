@@ -48,6 +48,11 @@ GEM
       multi_json (~> 1.0)
     haml (4.0.0)
       tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
@@ -120,6 +125,9 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    zurb-foundation (4.0.3)
+      rake
+      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
@@ -128,6 +136,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   haml
+  haml-rails
   jquery-rails
   omniauth
   omniauth-tumblr
@@ -135,3 +144,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  zurb-foundation (~> 4.0.0)

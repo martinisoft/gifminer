@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html
   %head
     %title Gifminer
@@ -10,4 +10,23 @@
       = notice
     %p.alert
       = alert
+    = render 'navigation'
+    / .row
+    /   .large-12.columns
+    /     / Desktop Slider
+    /     .hide-for-small
+    /       #featured
+    /         %img{:alt => "slide image", :src => "http://placehold.it/1000x400&text=Slide Image"}/
+    /         /
+    /           <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+    /           <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+    /     / End Desktop Slider
+    /     / Mobile Header
+    /     .row
+    /       .small-12.show-for-small
+    /         %br/
+    /         %img{:src => "http://placehold.it/1000x600&text=For Small Screens"}/
+    /     / End Mobile Header
+    %br/
     = yield
+    = render 'footer'
