@@ -15,6 +15,13 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# In development and testing these environment variables are set from config/env_vars.yml
+# In production these should be set in the environment, e.g. for Heroku: heroku config:add TUMBLR_KEY=SomeLongKeyValue
+unless Rails.env.production? && File.exists?('config/env_vars.yml')
+  env_vars = YAML.load(File.read('config/env_vars.yml'))
+  env_vars.each { |name, value| ENV[name] = value }
+end
+
 module Gifminer
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
