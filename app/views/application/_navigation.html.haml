@@ -1,9 +1,7 @@
 .row
   .large-12.columns
-    / Navigation
     %nav.top-bar
       %ul.title-area
-        / Title Area
         %li.name
           %h1
             %a{:href => "/"}
@@ -18,12 +16,9 @@
               = link_to 'Sign out', destroy_user_session_path, method: :delete
             - else
               = link_to 'Sign in', new_user_session_path
-          %li
-            %a{:href => "#"} Link 2
-        %ul.right
-          %li.search
-            %form
-              %input{:type => "search"}/
-          %li.has-button
-            %a.small.button{:href => "#"} Search
-    / End Navigation
+        %form{action: '/', method: :get}
+          %ul.right
+            %li.search
+              %input{type: 'search', name: 'q', value: @query}/
+            %li.has-button
+              %button.small.button{type: :submit} Search

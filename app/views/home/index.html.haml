@@ -1,46 +1,6 @@
 .row
   .large-12.columns
-    .row
-      / Thumbnails
-      .large-3.small-6.columns
-        %img{:src => "http://placehold.it/250x250&text=Thumbnail"}/
-        %h6.panel Description
-      .large-3.small-6.columns
-        %img{:src => "http://placehold.it/250x250&text=Thumbnail"}/
-        %h6.panel Description
-      .large-3.small-6.columns
-        %img{:src => "http://placehold.it/250x250&text=Thumbnail"}/
-        %h6.panel Description
-      .large-3.small-6.columns
-        %img{:src => "http://placehold.it/250x250&text=Thumbnail"}/
-        %h6.panel Description
-      / End Thumbnails
-.row
-  .large-12.columns
-    .row
-      / Content
-      .large-8.columns
-        .panel.radius
-          .row
-            .large-6.small-6.columns
-              %h4 Header
-              %hr/
-              %h5.subheader
-                Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-              .show-for-small{:align => "center"}
-                %a.small.radius.button{:href => "#"} Call To Action!
-                %br/
-                %a.small.radius.button{:href => "#"} Call To Action!
-            .large-6.small-6.columns
-              %p
-                Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-      .large-4.columns.hide-for-small
-        %h4 Get In Touch!
-        %hr/
-        %a{:href => "#"}
-        .panel.radius.callout{:align => "center"}
-          %strong Call To Action!
-        %a{:href => "#"}
-        .panel.radius.callout{:align => "center"}
-          %strong Call To Action!
-      / End Content
+    - unless @results.blank?
+      - @results.each do |result|
+        %a.th.radius.result{href: result.url, target: 'blank'}
+          %img{:src => result.url}
