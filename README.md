@@ -14,6 +14,8 @@ Getting Started
 
 * Run ```./script/bootstrap```
 * Enjoy a :beer: or :tea: while it does things for you
+* Copy `config/env_vars.example.yml` to `config/env_vars.yml` and set your development keys
+* Have another :beer:
 
 License
 -------

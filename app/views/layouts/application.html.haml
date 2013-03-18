@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+    %title Gifminer
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = render 'navigation'
+    .row
+      .large-12.columns
+        - unless notice.blank?
+          %p.notice.alert-box.radius{ 'data-alert' => true }
+            = notice
+            %a.close{ href: '#' } ×
+        - unless alert.blank?
+          %p.alert.alert-box.radius{ 'data-alert' => true }
+            = alert
+            %a.close{ href: '#' } ×
+    / .row
+    /   .large-12.columns
+    /     / Desktop Slider
+    /     .hide-for-small
+    /       #featured
+    /         %img{:alt => "slide image", :src => "http://placehold.it/1000x400&text=Slide Image"}/
+    /         /
+    /           <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+    /           <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+    /     / End Desktop Slider
+    /     / Mobile Header
+    /     .row
+    /       .small-12.show-for-small
+    /         %br/
+    /         %img{:src => "http://placehold.it/1000x600&text=For Small Screens"}/
+    /     / End Mobile Header
+    %br/
+    = yield
+    = render 'footer'

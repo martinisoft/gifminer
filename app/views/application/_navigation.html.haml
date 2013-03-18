@@ -1,0 +1,24 @@
+.row
+  .large-12.columns
+    %nav.top-bar
+      %ul.title-area
+        %li.name
+          %h1
+            %a{:href => "/"}
+              Gifminer
+        %li.toggle-topbar.menu-icon
+          %a{:href => "#"}
+            %span menu
+      %section.top-bar-section
+        %ul.left
+          %li
+            - if user_signed_in?
+              = link_to 'Sign out', destroy_user_session_path, method: :delete
+            - else
+              = link_to 'Sign in', new_user_session_path
+        %form{action: '/', method: :get}
+          %ul.right
+            %li.search
+              %input{type: 'search', name: 'q', value: @query}/
+            %li.has-button
+              %button.small.button{type: :submit} Search

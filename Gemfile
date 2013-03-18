@@ -18,7 +18,18 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'zurb-foundation', '~> 4.0.0'
 end
+
+gem 'haml'
+gem 'haml-rails'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-tumblr'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'httparty'
 
 gem 'jquery-rails'
 
@@ -36,3 +47,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+  gem "annotate", "~> 2.5.0"
+end

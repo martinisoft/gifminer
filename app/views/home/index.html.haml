@@ -1,0 +1,6 @@
+.row
+  .large-12.columns
+    - unless @results.blank?
+      - @results.each do |result|
+        %a.th.radius.result{href: result.url, target: 'blank'}
+          %img{:src => result.url}
