@@ -236,6 +236,8 @@ Devise.setup do |config|
   #
 
   config.omniauth :tumblr, ENV['TUMBLR_KEY'], ENV['TUMBLR_SECRET']
+  config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET']
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
 
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:

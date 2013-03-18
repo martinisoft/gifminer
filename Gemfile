@@ -27,6 +27,8 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-tumblr'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 gem 'httparty'
 
 gem 'jquery-rails'

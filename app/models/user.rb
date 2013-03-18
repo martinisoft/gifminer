@@ -22,13 +22,13 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:tumblr]
+         :omniauthable, :omniauth_providers => [:tumblr, :google_oauth2, :facebook]
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid
 
   has_many :sites
 
-  def self.find_for_tumblr_oauth(auth, signed_in_resource=nil)
+  def self.find_by_auth(auth, signed_in_resource=nil)
     if signed_in_resource.nil?
       user = User.where(:provider => auth.provider, :uid => auth.uid).first
       unless user
@@ -46,4 +46,5 @@ class User < ActiveRecord::Base
       signed_in_resource
     end
   end
+
 end
